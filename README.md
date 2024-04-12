@@ -6,7 +6,7 @@
 
 ​	我们的模型是您在保险领域的智囊团，具备丰富的专业知识和应用能力。无论您是想了解保险的基本概念、不同类型的保险，还是需要指导理赔流程或选择合适的保险政策，我们都能为您提供帮助。
 
-具体如何实现全流程的 chat-AI 微调，可参考本仓库-QQQQQQ
+具体如何实现全流程的 chat-AI 微调，可参考本仓库[meowcao/InsuranceModel: 基于internlm-chat-7b的保险知识大模型微调 (github.com)](https://github.com/meowcao/InsuranceModel?tab=readme-ov-file)
 
 如何学习大模型部署和微调请参考：[开源大模型食用指南](https://github.com/datawhalechina/self-llm.git) 以及 [书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)
 
@@ -125,4 +125,34 @@ streamlit run /root/ft-medqa/code/InternLM/chat/web_demo.py --server.address 127
 ![local_2](imgs/local_2.png)
 
 ![local_1](imgs/local_1.png)
+
+## OpenXLab 部署 中医药知识问答助手
+
+
+
+
+
+## LmDeploy部署
+
+
+
+
+
+## Lmdeploy&opencompass 量化以及量化评测
+
+
+
+### `KV Cache`量化
+
+
+
+### `W4A16`量化
+
+
+
+
+
+
+
+## OpenCompass 评测
 
