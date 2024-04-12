@@ -2,13 +2,13 @@
 
 ## 介绍
 
-​	欢迎使用我们的保险知识问答大语言模型！这个模型是基于ChineseNlpCorpus提供的丰富保险领域数据集开发而成。我们的数据集涵盖了用户的各种保险相关提问、网友的回答以及最佳回答，旨在为您提供全面、准确的保险知识解答。
+​	欢迎使用我们的保险知识问答大语言模型！这个模型是基于`ChineseNlpCorpus`提供的丰富保险领域数据集开发而成。我们的数据集涵盖了用户的各种保险相关提问、网友的回答以及最佳回答，旨在为您提供全面、准确的保险知识解答。
 
 ​	我们的模型是您在保险领域的智囊团，具备丰富的专业知识和应用能力。无论您是想了解保险的基本概念、不同类型的保险，还是需要指导理赔流程或选择合适的保险政策，我们都能为您提供帮助。
 
-`具体如何实现全流程的 chat-AI 微调，可参考本仓库-QQQQQQ`
+具体如何实现全流程的 chat-AI 微调，可参考本仓库-QQQQQQ
 
-`如何学习大模型部署和微调请参考：[开源大模型食用指南](https://github.com/datawhalechina/self-llm.git) 以及 [书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)`
+如何学习大模型部署和微调请参考：[开源大模型食用指南](https://github.com/datawhalechina/self-llm.git) 以及 [书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)
 
 ## OpenXlab 模型
 
@@ -20,7 +20,7 @@
 
 ## 数据集
 
-​	保险知识问答助手数据集采用中的ChineseNlpCorpus提供的包括用户提问、网友回答、最佳回答，共计 588000 余条，数据集样例：
+​	保险知识问答助手数据集采用中的`ChineseNlpCorpus`提供的包括用户提问、网友回答、最佳回答，共计 588000 余条，数据集样例：
 
 ```
 "input": "最近在安邦长青树中看到什么豁免，这个是什么意思？"
@@ -112,3 +112,14 @@ xtuner convert merge ./internlm-chat-7b ./hf ./merged --max-shard-size 2GB
 xtuner chat ./merged --prompt-template internlm_chat
 ```
 
+## 本地网页部署
+
+```
+streamlit run /root/ft-medqa/code/InternLM/chat/web_demo.py --server.address 127.0.0.1 --server.port 6006
+```
+
+效果演示
+
+![msedge_Sq28xCQr81](Readme/msedge_Sq28xCQr81.png)
+
+![image-20240412125136103](Readme/image-20240412125136103.png)
