@@ -122,9 +122,7 @@ streamlit run /root/ft-medqa/code/InternLM/chat/web_demo.py --server.address 127
 
 效果演示
 
-![local_2](imgs/local_2.png)
-
-![local_1](imgs/local_1.png)
+![local_3](imgs/local_3.png)
 
 ## OpenXLab 部署 中医药知识问答助手
 
