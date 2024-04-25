@@ -80,15 +80,16 @@ print(f"转换完成，结果已保存到 {output_json_file}")
 
 ## 微调
 
-  使用 `XTuner `训练， `XTuner `有各个模型的一键训练脚本，很方便。且对` InternLM2 `的支持度最高。
+  使用 `XTuner`训练， `XTuner`有各个模型的一键训练脚本，很方便。且对` InternLM2 `的支持度最高。
 
 ### XTuner
 
   使用 `XTuner` 进行微调，具体脚本可参考`configs`文件夹下的脚本，脚本内有较为详细的注释。
 
-| 基座模型         | 配置文件                               |
-| ---------------- | -------------------------------------- |
-| internlm-chat-7b | internlm_chat_7b_qlora_medqa2019_e3.py |
+| 基座模型          | 配置文件                               |
+| ----------------- | -------------------------------------- |
+| internlm-chat-7b  | internlm_chat_7b_qlora_medqa2019_e3.py |
+| internlm2-chat-7b | internlm2_1_8b_qlora_alpaca_e3_copy.py |
 
 微调方法如下:
 
@@ -100,7 +101,7 @@ cd ~/ft-medqa
 xtuner train  internlm_chat_7b_qlora_medqa2019_e3.py --deepspeed deepspeed_zero2
 ```
 
-2. 将得到的 PTH 模型转换为 HuggingFace 模型
+2. 将得到的 `PTH` 模型转换为`HuggingFace`模型
 
 ```
 internlm_chat_7b_qlora_medqa2019_e3
