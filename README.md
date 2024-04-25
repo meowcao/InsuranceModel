@@ -132,27 +132,54 @@ streamlit run /root/ft-medqa/code/InternLM/chat/web_demo.py --server.address 127
 
 
 
-## LmDeploy部署
-
-
-
-
-
-## Lmdeploy&opencompass 量化以及量化评测
-
-
-
-### `KV Cache`量化
-
-
-
-### `W4A16`量化
-
-
-
-
-
 
 
 ## OpenCompass 评测
 
+### 1. 面向GPU的环境安装
+
+```bash
+git clone https://github.com/open-compass/opencompass
+cd opencompass
+pip install -e .
+```
+
+### 2. 下载解压数据集
+
+```
+cp /share/temp/datasets/OpenCompassData-core-20231110.zip /root/opencompass/
+unzip OpenCompassData-core-20231110.zip
+```
+
+### 3. 启动评测
+
+```
+export MKL_SERVICE_FORCE_INTEL=1
+python run.py --datasets ceval_gen --hf-path /share/temp/model_repos/internlm-chat-7b/ --tokenizer-path /share/temp/model_repos/internlm-chat-7b/ --tokenizer-kwargs padding_side='left' truncation='left' trust_remote_code=True --model-kwargs trust_remote_code=True device_map='auto' --max-seq-len 2048 --max-out-len 16 --batch-size 4 --num-gpus 1 --debug
+```
+
+### 4. 保留相关结果
+
+```
+ceval-legal_professional: {'accuracy': 47.82608695652174}
+```
+
+全部评测结果可在目录`opencompassResult`中查看。
+
+
+
+## 💕 致谢
+
+### 项目成员
+
+* 俞曹-项目负责人 （负责项目规划，数据清洗及模型训练）
+* 范徐立（负责数据集收集、模型训练）
+* 陈博远（负责模型评测、模型部署）
+* 孙韬强（负责数据集收集、模型量化）
+* 邹锦帛 （负责数据集收集、模型量化）
+
+
+
+### 特别感谢
+
+***感谢上海人工智能实验室组织的 书生·浦语实战营 学习活动***
