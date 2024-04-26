@@ -308,6 +308,15 @@ ceval-legal_professional: {'accuracy': 47.82608695652174}
 
 
 
+## 参考资料
+
+1. EmoLLM-心理健康大模型 - https://github.com/SmartFlowAI/EmoLLM
+2. Chat-嬛嬛-甄嬛角色扮演大模型 - https://github.com/KMnO4-zx/xlab-huanhuan
+3. 中文保险问答数据集 https://github.com/SophonPlus/ChineseNlpCorpus
+4. 书生浦雨大语言模型训练营 https://github.com/InternLM/tutorial.git
+
+
+
 ## 💕 致谢
 
 ### 项目成员
